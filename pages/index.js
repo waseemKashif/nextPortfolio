@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { BsFillMoonStarsFill } from "react-icons/bs";
 import {
   AiFillTwitterCircle,
   AiFillLinkedin,
@@ -11,10 +10,10 @@ import wave from "../public/wave.png";
 import design from "../public/design.png";
 import code from "../public/code.png";
 import consulting from "../public/consulting.png";
-import { useState } from "react";
-
+import { useContext } from "react";
+import { DarkModeContext } from "./api/darkModeContext";
 export default function Home() {
-  const [darkMode,setDarkMode]=useState(false)
+  const {darkMode} = useContext(DarkModeContext)
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
@@ -25,27 +24,7 @@ export default function Home() {
 
       <main className=" bg-slate-100 dark:bg-gray-900 px-4 sm:px-20">
         <section className=" min-h-min mb-10">
-          <nav className="pt-10 flex justify-between ">
-            <h1 className=" text-lg sm:text-xl font-bold dark:text-white">
-              DevelopedByWaseem
-            </h1>
-            <ul className="flex items-center">
-              <li>
-                <BsFillMoonStarsFill
-                  className=" transition duration-300 ease-in-out  cursor-pointer fill-gray-500 text-2xl hover:fill-gray-900 transform hover:-translate-y-1 hover:scale-110 dark:fill-white "
-                  onClick={() => setDarkMode(!darkMode)}
-                />
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="transition duration-500 ease-in-out text-white py-2 px-4 rounded-md ml-8 bg-blue-500 hover:bg-blue-800 transform hover:-translate-y-1 hover:scale-110   "
-                >
-                  Resume
-                </a>
-              </li>
-            </ul>
-          </nav>
+         
           <div className=" text-center p-8 ">
             <h2 className=" transition duration-500 ease-in-out text-4xl sm:text-5xl py-2 text-teal-900 font-medium dark:text-slate-300 transform hover:-translate-y-1 hover:scale-110">
               Waseem Kashif
