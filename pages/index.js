@@ -22,9 +22,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className=" bg-slate-100 dark:bg-gray-900 px-4 sm:px-20">
+      <main className=" bg-slate-100 dark:bg-gray-900 sm:px-20 px-5">
         <section className=" min-h-min mb-10">
-         
           <div className=" text-center p-8 ">
             <h2 className=" transition duration-500 ease-in-out text-4xl sm:text-5xl py-2 text-teal-900 font-medium dark:text-slate-300 transform hover:-translate-y-1 hover:scale-110">
               Waseem Kashif
@@ -51,7 +50,7 @@ export default function Home() {
           </div>
         </section>
         {/* Second-section */}
-        <section>
+        <section className="min-h-min mb-10">
           <div>
             <h3 className="text-3xl py-1 dark:text-slate-100">
               Services I offer{" "}

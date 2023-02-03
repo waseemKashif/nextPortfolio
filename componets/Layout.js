@@ -15,7 +15,7 @@ const Layout = ({children}) => {
     <>
       <div className={navStyle.container}>
         <h1
-          className={` ${navStyle.logo} text-lg sm:text-xl font-bold dark:text-white `}
+          className={` ${navStyle.logo} text-base sm:text-xl font-bold dark:text-white `}
         >
           DevelopedByWaseem
         </h1>
@@ -35,10 +35,10 @@ const Layout = ({children}) => {
               onClick={() => setDarkMode(!darkMode)}
             />
           </li>
-          <li>
+          <li className={navStyle.navListItems}>
             <a
               href="#"
-              className="transition duration-500 ease-in-out text-white py-2 px-4 rounded-md ml-8 bg-blue-500 hover:bg-blue-800 transform hover:-translate-y-1 hover:scale-110   "
+              className="transition duration-500 ease-in-out text-white px-4 rounded-md bg-blue-500 hover:bg-blue-800 transform hover:-translate-y-1 hover:scale-110   "
             >
               Resume
             </a>

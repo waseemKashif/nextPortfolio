@@ -9,11 +9,11 @@ export default function App({ Component, pageProps }) {
 
   return (
     
-    <>
+    
       <DarkModeContext.Provider value={{darkMode,setDarkMode}}>
-        <Layout />
+        <Layout>
         <Component {...pageProps} />
+        </ Layout>
       </DarkModeContext.Provider>
-    </>
   );
 }
